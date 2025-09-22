@@ -6,10 +6,10 @@
 ### 문서 정보
 
 - **문서명**: 반띵 일반 API 명세서
-- **버전**: v2.0.0
+- **버전**: v2.0.1
 - **작성일**: 2025.09.11
 - **작성자**: 송민재
-- **최종 수정일**: 2025.09.22
+- **최종 수정일**: 2025.09.23
 
 -----
 
@@ -289,6 +289,72 @@
       | `hostInfo`| `Object`| 호스트 정보 |
       | `participants`| `Array<Object>`| 참여자 목록 |
 - **오류**: `401 Unauthorized`, `404 Not Found` (`MEETING_NOT_FOUND`)
+
+### 4.3. 프로필 모임 목록 조회
+
+- **Endpoint**: `GET /meetings/condition`
+- **설명**: 주어진 사용자의 특정 참여 상태 모임 목록을 페이징 처리하여 조회합니다.
+- **인증**: **필수**
+- **요청**:
+    - **Path Parameter**: `page` (int, 조회할 모임 페이지)
+    - **Path Parameter**: `size` (size, 한번에 조회할 모임의 개수)
+    - **Path Parameter**: `status` (MeetingParticipant.ApplicationStatus, 사용자의 참여 상태)
+- **응답 (200 OK)**:
+    - **Body**: `ApiResponse<MeetingProfilePageResponse>`
+      - **JSON 응답 예시**:
+        ```json
+        {
+          "success": true,
+          "message": "모임 상세 정보가 성공적으로 조회되었습니다.",
+          "timestamp": "...",
+          "data": {
+            "content": [
+              {
+                "meetingId": 101,
+                "title": "코스트코 견과류 소분해요!",
+                "description": "아몬드, 호두 등 견과류를 4명이서 나눠 가져요...",
+                "martName": "코스트코 양재점",
+                "meetingDate": "2025-09-20T14:00:00",
+                "currentParticipants": 2,
+                "maxParticipants": 4,
+                "status": "RECRUITING",
+                "thumbnailImageUrl": "/media/some-image.jpg",
+                "hostInfo": {
+                  "nickname": "김코스트",
+                  "profileImageUrl": "...",
+                  "trustScore": 320
+                },
+                "participants": [
+                  {"nickname": "김코스트", "profileImageUrl": "...", "participantType": "HOST"},
+                  {"nickname": "이소분", "profileImageUrl": "...", "participantType": "PARTICIPANT"}
+                ]
+              }
+            ],
+            "page": 0,
+            "size": 4,
+            "totalElements": 1
+          }
+        }
+        ```
+        - **상세 스펙 (`data`)**:
+
+          | 필드                    | 타입              | 설명                 |
+          |-----------------------|-----------------|--------------------|
+          | `meetingId`           | `Long`          | 모임 ID              |
+          | `title`               | `String`        | 제목                 |
+          | `description`         | `String`        | 상세 설명              |
+          | `martName`            | `String`        | 마트 이름              |
+          | `meetingDate`         | `String`        | 모임 날짜 (ISO 8601)   |
+          | `currentParticipants` | `Integer`       | 현재 인원              |
+          | `maxParticipants`     | `Integer`       | 최대 인원              |
+          | `status`              | `String`        | 모임 상태              |
+          | `thumbnailImageUrl`   | `String`        | 썸네일 이미지 URL        |
+          | `hostInfo`            | `Object`        | 호스트 정보             |
+          | `participants`        | `Array<Object>` | 참여자 목록             |
+          | `page`                | `int`           | 조회할 모임 페이지         |
+          | `size`                | `int`           | 한번에 조회할 모임의 개수     |
+          | `totalElements`       | `long`          | 조건에 해당하는 모든 모임의 개수 |
+- **오류**: `401 Unauthorized`, `404 Not Found`
 
 ### 4.3. 모임 생성
 
@@ -730,8 +796,9 @@
 
 ## 7\. 변경 이력
 
-| 버전     | 날짜 | 변경 내용 | 작성자 |
-|:-------| :--- | :--- |:----|
+| 버전     | 날짜         | 변경 내용                              | 작성자 |
+|:-------|:-----------|:-----------------------------------|:----|
+| v2.0.1 | 2025.09.23 | 프로필 모임 목록 조회 REST API 추가           | 강관주 |
 | v2.0.0 | 2025.09.22 | 백엔드 코드 기반으로 명세서 현행화 및 일부 상세 스펙 추가. | 고동현 |
-| v1.0.1 | 2025.09.11 | JPA 엔터티 기반 응답 필드 및 신규 API 추가 | 송민재 |
-| v1.0.0 | 2025.09.11 | 초기 문서 작성 | 송민재 |
+| v1.0.1 | 2025.09.11 | JPA 엔터티 기반 응답 필드 및 신규 API 추가       | 송민재 |
+| v1.0.0 | 2025.09.11 | 초기 문서 작성                           | 송민재 |
