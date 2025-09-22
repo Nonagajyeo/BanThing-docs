@@ -182,10 +182,10 @@ npm install
 
 각종 API 키를 발급받아야 합니다. 자세한 방법은 다음 문서들을 참조하세요:
 
-- **[카카오 OAuth 설정 가이드](guides/API_SETUP_KAKAO_OAUTH.md)**
-- **[Google Gemini API 설정 가이드](guides/API_SETUP_GOOGLE_GEMINI.md)**
-- **[카카오 맵 API 설정 가이드](guides/API_SETUP_KAKAO_MAP.md)**
-- **[JWT 토큰 설정 가이드](guides/API_SETUP_JWT.md)**
+- **[카카오 OAuth 설정 가이드](API_SETUP_KAKAO_OAUTH.md)**
+- **[Google Gemini API 설정 가이드](API_SETUP_GOOGLE_GEMINI.md)**
+- **[카카오 맵 API 설정 가이드](API_SETUP_KAKAO_MAP.md)**
+- **[JWT 토큰 설정 가이드](API_SETUP_JWT.md)**
 
 ---
 
