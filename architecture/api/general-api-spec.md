@@ -638,7 +638,7 @@
 ### 5.4. 댓글 삭제
 
 - **Endpoint**: `DELETE /{commentId}`
-- **설명**: 자신의 댓글을 삭제합니다. (작성자, 호스트만 가능). 성공 시 **204 No Content**를 반환합니다.
+- **설명**: 자신의 댓글을 논리적으로 삭제합니다. (작성자만 가능). 성공 시 **204 No Content**를 반환합니다.
 - **인증**: **필수**
 - **요청**:
     - **Path Parameters**: `meetingId`, `commentId` (Long)

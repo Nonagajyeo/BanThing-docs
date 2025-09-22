@@ -4,7 +4,7 @@
 
 ## 문서 정보
 - **문서명**: 기술 스택 목록
-- **버전**: v1.0.2
+- **버전**: v1.0.3
 - **작성일**: 2025.09.09
 - **작성자**: [송민재](https://github.com/songkey06)
 - **최종 수정일**: 2025.09.22
@@ -13,24 +13,24 @@
 
 ### 통합된 기술 스택 명세서
 
-| 구분            | 기술 및 버전                                                                                         |
-|:--------------|:------------------------------------------------------------------------------------------------|
-| **언어**        | Java 17                                                                                         |
-| **프레임워크**     | Spring Boot 3.5.5, P6Spy 1.9.1                                                                  |
-| **프론트엔드**     | Vite 7.1.2, HTML5, CSS3, JavaScript (ES6+), React 19.1.1, React Router DOM 7.9.1                |
-| **상태 관리**     | **Zustand 5.0.8**                                                                               |
-| **지도**        | **react-kakao-maps-sdk 1.2.0**                                                                  |
-| **보안/인증**     | Spring Security 3.5.5, JWT (JJWT 0.12.5), Spring Security OAuth2 Client 3.5.5                   |
-| **HTTP 통신**   | **Axios 1.x.x**                                                                                 |
-| **AI 연동**     | Google Gemini API ( **Google Cloud Generative AI 1.2.0**)                                       |
-| **데이터베이스**    | MariaDB 11.4.x, H2 Database, Spring Data JPA 3.5.5, Hibernate ORM 6.x, QueryDSL 5.0.0 (Jakarta) |
-| **빌드/의존성 관리** | Gradle (Spring Dependency Management Plugin 1.1.7)                                              |
-| **테스트 프레임워크** | JUnit 5, Mockito (mockito-core, mockito-junit-jupiter)                                          |
-| **개발 편의 도구**  | Lombok, Spring Boot DevTools 3.5.5                                                              |
-| **로깅**        | Spring Boot Logging (Logback), Hibernate SQL Debug/Trace                                        |
-| **협업 도구**     | Git, GitHub, Discord                                                                            |
-| **개발 환경**     | IntelliJ IDEA Ultimate 2025.1, Windows 11                                                       |
-| **테스트 환경**    | Chrome (최신 안정화 버전), Postman Desktop App                                                         |
+| 구분            | 기술 및 버전                                                                                                                        |
+|:--------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| **언어**        | Java 17                                                                                                                        |
+| **프레임워크**     | Spring Boot 3.5.5 (Web, Validation), P6Spy 1.9.1                                                                               |
+| **프론트엔드**     | Vite 7.1.2, HTML5, CSS3, JavaScript (ES6+), React 19.1.1, React Router DOM 7.9.1, **React Icons 5.5.0**,  **Sass/SCSS 1.92.1** |
+| **상태 관리**     | Zustand 5.0.8                                                                                                                  |
+| **지도**        | react-kakao-maps-sdk 1.2.0                                                                                                     |
+| **보안/인증**     | Spring Security 3.5.5, JWT (JJWT 0.12.5), Spring Security OAuth2 Client 3.5.5                                                  |
+| **HTTP 통신**   | Axios 1.x.x                                                                                                                    |
+| **AI 연동**     | Google Gemini API ( **Google Cloud Generative AI 1.2.0**)                                                                      |
+| **데이터베이스**    | MariaDB 11.4.x, H2 Database, Spring Data JPA 3.5.5, Hibernate ORM 6.x, QueryDSL 5.0.0 (Jakarta)                                |
+| **빌드/의존성 관리** | Gradle (Spring Dependency Management Plugin 1.1.7), **npm 10.9.2**                                                             |
+| **테스트 프레임워크** | JUnit 5, Mockito (mockito-core, mockito-junit-jupiter)                                                                         |
+| **개발 편의 도구**  | Lombok, Spring Boot DevTools 3.5.5                                                                                             |
+| **로깅**        | Spring Boot Logging (Logback), Hibernate SQL Debug/Trace                                                                       |
+| **협업 도구**     | Git, GitHub, Discord                                                                                                           |
+| **개발 환경**     | IntelliJ IDEA Ultimate 2025.1, Windows 11                                                                                      |
+| **테스트 환경**    | Chrome (최신 안정화 버전), Postman Desktop App                                                                                        |
 
 ---
 
@@ -49,6 +49,9 @@
 
 
 * **React 19.1.1, React Router DOM 7.9.1**: 사용자 인터페이스를 만들고 SPA(단일 페이지 애플리케이션)에서 페이지 이동을 관리하는 라이브러리입니다.
+
+
+* **Sass 1.92.1**: CSS를 확장하여 변수, 중첩, 믹스인 등의 기능을 사용할 수 있게 해주는 CSS 전처리기입니다.
 
 
 * **Zustand 5.0.8**: 가볍고 간단한 전역 상태 관리 라이브러리로, 복잡한 데이터 흐름을 효율적으로 처리합니다.
@@ -75,6 +78,9 @@
 * **Gradle**: 프로젝트의 빌드와 라이브러리 의존성을 자동으로 관리하는 빌드 도구입니다.
 
 
+* **npm 10.9.2**: Node.js 프로젝트의 패키지 설치와 관리를 담당하는 기본 패키지 매니저입니다.
+
+
 * **JUnit 5, Mockito**: 백엔드 코드의 단위 및 통합 테스트를 작성하고 가짜 객체를 만들어 테스트 환경을 구축하는 데 사용됩니다.
 
 
@@ -95,11 +101,12 @@
 
 ## 변경 이력
 
-| 버전     | 날짜         | 변경 내용 | 작성자 |
-|--------|------------|--|-----|
-| v1.0.0 | 2025.09.09 | 초기 문서 작성 | 송민재 |
-| v1.0.1 | 2025.09.11 | fetch를 Axios로 수정 | 송민재 |
-| v1.0.2 | 2025.09.22 | 파일 업데이트 (버전 및 정보 수정) | 송민재 |
+| 버전     | 날짜          | 변경 내용 | 작성자 |
+|--------|-------------|--|-----|
+| v1.0.0 | 2025.09.09  | 초기 문서 작성 | 송민재 |
+| v1.0.1 | 2025.09.11  | fetch를 Axios로 수정 | 송민재 |
+| v1.0.2 | 2025.09.22  | 파일 업데이트 (버전 및 정보 수정) | 송민재 |
+| v1.0.3 | 2025.09.23  | npm 10.9.2, Sass 1.92.1 추가 | 송민재 |
 
 
 ---
