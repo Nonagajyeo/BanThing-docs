@@ -7,7 +7,7 @@
 - **문서명**: 카카오 맵 SDK 적용 명세서
 - **버전**: v1.0.0
 - **작성일**: 2025.09.22
-- **작성자**: 고동현
+- **작성자**: [고동현](https://github.com/rhehdgus8831)
 - **최종 수정일**: 2025.09.22
 - **관련 기술 스택**: `react-kakao-maps-sdk`, Kakao Maps Javascript SDK v2
 
