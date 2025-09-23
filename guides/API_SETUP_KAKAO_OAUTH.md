@@ -35,8 +35,6 @@
 생성된 애플리케이션의 **"요약 정보"** 탭에서 다음 키들을 확인합니다:
 
 - **REST API 키**: OAuth에서 사용 ✅
-- **JavaScript 키**: 카카오 맵에서 사용 ✅
-- **Admin 키**: 사용 안 함
 
 > 🔑 **REST API 키**를 `.env` 파일의 `KAKAO_CLIENT_ID`에 설정합니다.
 

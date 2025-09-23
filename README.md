@@ -131,13 +131,13 @@
 
 ## 팀 구성
 
-| 역할 | 이름                                     | 주요 기술 및 담당 기능                                                                                                         | 회고록 링크                                                                                                             |
-| -- |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| 팀장 | [김경민](https://github.com/minee0505)    | **Backend**: AI 챗봇(Google Gemini API), 모임 삭제/완료, 모임 신청 **Frontend**: 모임 상세 페이지 **Docs**: 회의록, 환경설정 가이드                | [김경민 회고록](https://github.com/minee0505/memoir)                                                                     |
-| 팀원 | [고동현](https://github.com/rhehdgus8831) | **Backend**: 모임 생성/조회, 모임 승인/거절   **Frontend**: 모임 생성/메인 페이지(지도), 참여자 관리 **Docs**: 프로젝트 개요, 와이어프레임                    | [고동현 회고록](https://github.com/rhehdgus8831/Project-retrospective/tree/main/Nonagajyeo)                              |
-| 팀원 | [강관주](https://github.com/Kanggwanju)   | **Backend**: 카카오 OAuth, Spring Security, JWT 인증 **Frontend**: 로그인/로그아웃, 마이페이지, 약관동의, 공통 헤더 **Docs**: 기능 요구사항 명세서, ERD | [강관주 회고록](https://github.com/Kanggwanju/Nonagajyeo/tree/main/memoir)                                               |
-| 팀원 | [송민재](https://github.com/songkey06)    | **Backend**: 피드백/댓글 시스템, 마이페이지 API **Frontend**: 피드백 UI, 댓글 **Docs**: API 명세서, 기술 스택 문서                               | [송민재 회고록](https://github.com/songkey06/Project-Recollection/tree/main/Nonagajyeo) |
-| 팀원 | [박현수](https://github.com/hsp64)        | **Docs**: 사용자 플로우, 비즈니스 로직                                                                                            | [박현수 회고록](https://github.com/hsp64/memoir/tree/main/Nonagajyeo) |
+| 역할 | 이름                                     | 주요 기술 및 담당 기능                                                                                                                                                                                                                     | 회고록 링크                                                                                |
+| -- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 팀장 | [김경민](https://github.com/minee0505)    | **Backend**: AI 챗봇(Google Gemini API), REST API 설계, 대화 기록 관리, 자연어 모임 추천, 폴백 로직 구현  **Frontend**: 챗봇 UI/UX, 실시간 대화 인터페이스, 인증 상태 기반 UI  **Docs**: 회의록, README, 환경설정 가이드, AI 챗봇 명세서, 컬러 가이드, Git 워크플로우                               | [김경민 회고록](https://github.com/minee0505/memoir)                                        |
+| 팀원 | [고동현](https://github.com/rhehdgus8831) | **Backend**: 모임 CRUD API, 마트 조회 API, 참여자 관리, 모임 상태 자동화 스케줄러  **Frontend**: 메인 페이지, 카카오 맵 API 연동, 지도-목록 연동, 모임 생성 페이지, 참여자 관리 UI  **Docs**: 프로젝트 배경 분석, 시장 조사, 와이어프레임, 기술 명세서, 발표 자료                                               | [고동현 회고록](https://github.com/rhehdgus8831/Project-retrospective/tree/main/Nonagajyeo) |
+| 팀원 | [강관주](https://github.com/Kanggwanju)   | **Backend**: Spring Security, JWT 인증/인가, HttpOnly 쿠키 기반 토큰 관리, 카카오 OAuth SSO, Access Token 재발급, 모임 참가/승인 API  **Frontend**: 카카오 로그인 연동, 로그인/약관동의 페이지, 마이페이지(스켈레톤 UI, 페이지네이션)  **Docs**: 서비스 요구사항 정의, ERD 설계, 법적 리스크 문서, 외부 API 명세 | [강관주 회고록](https://github.com/Kanggwanju/Nonagajyeo/tree/main/memoir)                  |
+| 팀원 | [송민재](https://github.com/songkey06)    | **Backend**: 댓글 CRUD, 피드백 작성/조회 API  **Frontend**: 댓글 모달, 피드백 모달, 댓글/피드백 작성 UI(조건부 렌더링), 신뢰도 뱃지 색상 변경, 마이페이지 뱃지 추가  **Docs**: 타겟 시장/페르소나 분석, 기술/일반 API 명세서, ERD/테이블 스키마 수정                                                        | [송민재 회고록](https://github.com/songkey06/Project-Recollection/tree/main/Nonagajyeo)     |
+| 팀원 | [박현수](https://github.com/hsp64)        | **Docs**: 사용자 플로우, 비즈니스 로직                                                                                                                                                                                                        | [박현수 회고록](https://github.com/hsp64/memoir/tree/main/Nonagajyeo)                       |
 
 > Team 나띵의 팀 구성 및 역할은 [상세 문서](planning/team_roles.md)에서 더 자세히 확인할 수 있습니다.
 
@@ -147,14 +147,14 @@
 
 **2025.09.05 ~ 2025.09.23 (총 19일)**
 
-| **Phase**                          | **기간**         | **주요 내용**                               |
-| ---------------------------------- |----------------|-----------------------------------------|
-| **Phase 1. Planning**              | 09.05 ~ 09.11  | 프로젝트 기획, 기술스택 선정, 문서 작성, ERD 설계        |
-| **Phase 2. Backend Development**   | 09.12 ~ 09.17  | Spring Boot API 개발, DB 연동, 인증 시스템      |
-| **Phase 3. Frontend Development**  | 09.18 ~ 09.21  | React UI 개발, API 연동, 카카오 맵/SSO 연동      |
-| **Phase 4. Integration & Testing** | 09.22          | 백엔드-프론트엔드 통합, 기능 테스트, 버그 수정          |
-| **Phase 5. Documentation**         | 09.22 ~ 09.23  | 최종 문서 정리, README 완성, 배포 준비           |
-| **Phase 6. Final Review**          | 09.23          | 최종 점검, 발표 준비                           |
+| **Phase**                          | **기간**        | **주요 내용**                               |
+| ---------------------------------- |---------------|-----------------------------------------|
+| **Phase 1. Planning**              | 09.05 ~ 09.11 | 프로젝트 기획, 기술스택 선정, 문서 작성, ERD 설계        |
+| **Phase 2. Backend Development**   | 09.12 ~ 09.17 | Spring Boot API 개발, DB 연동, 인증 시스템      |
+| **Phase 3. Frontend Development**  | 09.18 ~ 09.21 | React UI 개발, API 연동, 카카오 맵/SSO 연동      |
+| **Phase 4. Integration & Testing** | 09.22 ~ 09.23 | 백엔드-프론트엔드 통합, 기능 테스트, 버그 수정          |
+| **Phase 5. Documentation**         | 09.22 ~ 09.23 | 최종 문서 정리, README 완성, 배포 준비           |
+| **Phase 6. Final Review**          | 09.23         | 최종 점검, 발표 준비                           |
 
 ---
 

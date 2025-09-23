@@ -58,14 +58,14 @@ GET /login/oauth2/code/kakao
 
 #### Success Response
 - **HTTP Status**: `302 Found`
-- **Location**: `http://localhost:5173`
+- **Location**: `http://localhost:5173/popup-close`
 - **Set-Cookie**:
     - `ACCESS_TOKEN=<jwt_token>; HttpOnly; Path=/; Domain=localhost; SameSite=Lax; Max-Age=900`
     - `REFRESH_TOKEN=<jwt_token>; HttpOnly; Path=/; Domain=localhost; SameSite=Lax; Max-Age=604800`
 
 #### Error Response
 - **HTTP Status**: `302 Found`
-- **Location**: `http://localhost:5173?from=oauth2&error=<error_message>`
+- **Location**: `http://localhost:5173/popup-close?from=oauth2&error=<error_message>`
 
 ---
 
