@@ -4,10 +4,10 @@
 
 ## 문서 정보
 - **문서명**: 기술 스택 목록
-- **버전**: v1.0.3
+- **버전**: v1.0.4
 - **작성일**: 2025.09.09
 - **작성자**: [송민재](https://github.com/songkey06)
-- **최종 수정일**: 2025.09.22
+- **최종 수정일**: 2025.09.28
 
 ---
 
@@ -20,7 +20,7 @@
 | **프론트엔드**     | Vite 7.1.2, HTML5, CSS3, JavaScript (ES6+), React 19.1.1, React Router DOM 7.9.1, **React Icons 5.5.0**,  **Sass/SCSS 1.92.1** |
 | **상태 관리**     | Zustand 5.0.8                                                                                                                  |
 | **지도**        | react-kakao-maps-sdk 1.2.0                                                                                                     |
-| **보안/인증**     | Spring Security 3.5.5, JWT (JJWT 0.12.5), Spring Security OAuth2 Client 3.5.5                                                  |
+| **보안/인증**     | Spring Security 6.5.5, JWT (JJWT 0.12.5), OAuth2 Client, Kakao Login API (OAuth 2.0)                                           |
 | **HTTP 통신**   | Axios 1.x.x                                                                                                                    |
 | **AI 연동**     | Google Gemini API ( **Google Cloud Generative AI 1.2.0**)                                                                      |
 | **데이터베이스**    | MariaDB 11.4.x, H2 Database, Spring Data JPA 3.5.5, Hibernate ORM 6.x, QueryDSL 5.0.0 (Jakarta)                                |
@@ -60,7 +60,10 @@
 * **react-kakao-maps-sdk 1.2.0**: 카카오 지도 API를 React 컴포넌트 형태로 쉽게 사용할 수 있도록 도와주는 라이브러리입니다.
 
 
-* **Spring Security 3.5.5, JWT (JJWT 0.12.5), Spring Security OAuth2 Client 3.5.5**: 사용자 인증 및 권한을 관리하고 토큰 기반 로그인과 소셜 로그인 기능을 제공하는 보안 프레임워크입니다.
+* **Spring Security 6.5.5, JWT (JJWT 0.12.5), OAuth2 Client**: 사용자 인증 및 권한을 관리하고 토큰 기반 로그인과 소셜 로그인 기능을 제공하는 보안 프레임워크입니다.
+
+
+* **Kakao Login API (OAuth 2.0)**: 카카오 인증 서버와 OAuth 2.0 플로우를 통해 사용자 소셜 로그인을 구현합니다.
 
 
 * **Axios 1.x.x**: Promise 기반의 HTTP 클라이언트 라이브러리로, 간편한 API 요청 및 응답 처리를 지원합니다.
@@ -101,12 +104,13 @@
 
 ## 변경 이력
 
-| 버전     | 날짜          | 변경 내용 | 작성자 |
-|--------|-------------|--|-----|
-| v1.0.0 | 2025.09.09  | 초기 문서 작성 | 송민재 |
-| v1.0.1 | 2025.09.11  | fetch를 Axios로 수정 | 송민재 |
-| v1.0.2 | 2025.09.22  | 파일 업데이트 (버전 및 정보 수정) | 송민재 |
-| v1.0.3 | 2025.09.23  | npm 10.9.2, Sass 1.92.1 추가 | 송민재 |
+| 버전     | 날짜         | 변경 내용                                             | 작성자 |
+|--------|------------|---------------------------------------------------|-----|
+| v1.0.0 | 2025.09.09 | 초기 문서 작성                                          | 송민재 |
+| v1.0.1 | 2025.09.11 | fetch를 Axios로 수정                                  | 송민재 |
+| v1.0.2 | 2025.09.22 | 파일 업데이트 (버전 및 정보 수정)                              | 송민재 |
+| v1.0.3 | 2025.09.23 | npm 10.9.2, Sass 1.92.1 추가                        | 송민재 |
+| v1.0.4 | 2025.09.28 | Spring Security 버전 수정(6.5.5) 및 Kakao Login API 추가 | 강관주 |
 
 
 ---
